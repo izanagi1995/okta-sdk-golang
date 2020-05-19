@@ -38,11 +38,12 @@ func Test_can_get_a_user(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Get-User"
-	profile["email"] = "john-get-user@example.com"
-	profile["login"] = "john-get-user@example.com"
+	profile["email"] = "john-go-sdk-get-user" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-get-user" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -84,11 +85,12 @@ func Test_can_activate_a_user(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Activate"
-	profile["email"] = "john-activate@example.com"
-	profile["login"] = "john-activate@example.com"
+	profile["email"] = "john-go-sdk-activate" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-activate" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -134,11 +136,12 @@ func Test_can_update_user_profile(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Profile-Update"
-	profile["email"] = "john-profile-update@example.com"
-	profile["login"] = "john-profile-update@example.com"
+	profile["email"] = "john-go-sdk-profile-update" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-profile-update" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -180,11 +183,12 @@ func Test_can_suspend_a_user(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Suspend"
-	profile["email"] = "john-suspend@example.com"
-	profile["login"] = "john-suspend@example.com"
+	profile["email"] = "john-go-sdk-suspend" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-suspend" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -243,11 +247,12 @@ func Test_can_change_users_password(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Change-Password"
-	profile["email"] = "john-change-password@example.com"
-	profile["login"] = "john-change-password@example.com"
+	profile["email"] = "john-go-sdk-change-password" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-change-password" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -302,11 +307,12 @@ func Test_can_get_reset_password_link_for_user(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Get-Reset-Password-Url"
-	profile["email"] = "john-get-reset-password-url@example.com"
-	profile["login"] = "john-get-reset-password-url@example.com"
+	profile["email"] = "john-go-sdk-get-reset-password-url" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-get-reset-password-url" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -346,11 +352,12 @@ func Test_can_expire_a_users_password_and_get_a_temp_one(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Expire-Password"
-	profile["email"] = "john-expire-password@example.com"
-	profile["login"] = "john-expire-password@example.com"
+	profile["email"] = "john-go-sdk-expire-password" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-expire-password" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -390,11 +397,12 @@ func Test_can_change_user_recovery_question(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Change-Recovery-Question"
-	profile["email"] = "john-change-recovery-question@example.com"
-	profile["login"] = "john-change-recovery-question@example.com"
+	profile["email"] = "john-go-sdk-change-recovery-question" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-change-recovery-question" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -462,11 +470,12 @@ func Test_can_assign_a_user_to_a_role(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Role"
-	profile["email"] = "john-role@example.com"
-	profile["login"] = "john-role@example.com"
+	profile["email"] = "john-go-sdk-role" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-role" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -486,27 +495,27 @@ func Test_can_assign_a_user_to_a_role(t *testing.T) {
 	// List roles for the user and verify added role → GET /api/v1/users/{{userId}}/roles
 	roles, _, err := client.User.ListAssignedRoles(user.Id, nil)
 	found := false
-	roleId := ""
+	roleID := ""
 	for _, role := range roles {
 		if role.Type == "USER_ADMIN" {
 			found = true
-			roleId = role.Id
+			roleID = role.Id
 		}
 	}
 	assert.True(t, found, "Could not verify USER_ADMIN was added to the user")
 
 	// Remove role for the user → DELETE /api/v1/users/{{userId}}//roles/{{roleId}}/
-	_, err = client.User.RemoveRoleFromUser(user.Id, roleId)
+	_, err = client.User.RemoveRoleFromUser(user.Id, roleID)
 	require.NoError(t, err, "Should not have had an error when removing role to user")
 
 	// List roles for user and verify role was removed → GET /api/v1/users/{{userId}}/roles
 	roles, _, err = client.User.ListAssignedRoles(user.Id, nil)
 	found = false
-	roleId = ""
+	roleID = ""
 	for _, role := range roles {
 		if role.Type == "USER_ADMIN" {
 			found = true
-			roleId = role.Id
+			roleID = role.Id
 		}
 	}
 	assert.False(t, found, "Could not verify USER_ADMIN was removed to the user")
@@ -534,11 +543,12 @@ func Test_user_group_target_role(t *testing.T) {
 	uc := &okta.UserCredentials{
 		Password: p,
 	}
+	uuid := tests.GenUUID()
 	profile := okta.UserProfile{}
 	profile["firstName"] = "John"
 	profile["lastName"] = "Group-Target"
-	profile["email"] = "john-group-target@example.com"
-	profile["login"] = "john-group-target@example.com"
+	profile["email"] = "john-go-sdk-group-target" + uuid + "@example.com"
+	profile["login"] = "john-go-sdk-group-target" + uuid + "@example.com"
 	u := &okta.User{
 		Credentials: uc,
 		Profile:     &profile,
@@ -550,7 +560,7 @@ func Test_user_group_target_role(t *testing.T) {
 
 	// Create a new group → POST /api/v1/groups
 	gp := &okta.GroupProfile{
-		Name: "Group-Target Test Group",
+		Name: "Group-Target Test Group" + uuid,
 	}
 	g := &okta.Group{
 		Profile: gp,
@@ -579,9 +589,9 @@ func Test_user_group_target_role(t *testing.T) {
 	}
 	assert.True(t, found, "Could not verify group target")
 
-	//Remove Group Target from Admin User Role and verify removed → DELETE /api/v1/users/{{userId}}/roles/{{roleId}}/targets/groups/{{groupId}}
+	// Remove Group Target from Admin User Role and verify removed → DELETE /api/v1/users/{{userId}}/roles/{{roleId}}/targets/groups/{{groupId}}
 	gp = &okta.GroupProfile{
-		Name: "TMP - Group-Target Test Group",
+		Name: "TMP - Group-Target Test Group" + uuid,
 	}
 	g = &okta.Group{
 		Profile: gp,

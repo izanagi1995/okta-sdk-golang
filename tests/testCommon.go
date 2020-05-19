@@ -23,6 +23,7 @@ import (
 
 	"github.com/jarcoal/httpmock"
 
+	guuid "github.com/google/uuid"
 	"github.com/okta/okta-sdk-golang/okta"
 )
 
@@ -42,4 +43,9 @@ func MockResponse(responses ...*http.Response) httpmock.Responder {
 
 		return nil, fmt.Errorf("no response found for call %v to %s", count, req.URL.Path)
 	}
+}
+
+func GenUUID() string {
+	id := guuid.New()
+	return id.String()
 }
