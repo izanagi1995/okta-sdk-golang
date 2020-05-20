@@ -29,7 +29,7 @@ import (
 	"github.com/okta/okta-sdk-golang/tests"
 )
 
-func Test_can_get_applicaiton_by_id(t *testing.T) {
+func Test_can_get_application_by_id(t *testing.T) {
 	client, _ := tests.NewClient()
 
 	basicApplicationSettingsApplication := okta.NewBasicApplicationSettingsApplication()
@@ -48,7 +48,7 @@ func Test_can_get_applicaiton_by_id(t *testing.T) {
 	appId := application.(*okta.BasicAuthApplication).Id
 
 	foundApplication, _, err := client.Application.GetApplication(appId, okta.NewBasicAuthApplication(), nil)
-	require.NoError(t, err, "Should not error when getting an applicaiton by id")
+	require.NoError(t, err, "Should not error when getting an application by id")
 
 	assert.Equal(t, appId, foundApplication.(*okta.BasicAuthApplication).Id, "Application found was not correct")
 

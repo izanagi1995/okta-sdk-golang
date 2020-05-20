@@ -463,6 +463,11 @@ func Test_can_change_user_recovery_question(t *testing.T) {
 
 func Test_can_assign_a_user_to_a_role(t *testing.T) {
 	client, _ := tests.NewClient()
+
+	if client.GetConfig().Okta.Client.AuthorizationMode == "PrivateKey" {
+		t.Skip("test has been skipped. The endpoint does not support PrivateKey")
+	}
+
 	// Create a user with credentials, activated by default → POST /api/v1/users?activate=true
 	p := &okta.PasswordCredential{
 		Value: "Abcd1234",
@@ -536,6 +541,11 @@ func Test_can_assign_a_user_to_a_role(t *testing.T) {
 
 func Test_user_group_target_role(t *testing.T) {
 	client, _ := tests.NewClient()
+
+	if client.GetConfig().Okta.Client.AuthorizationMode == "PrivateKey" {
+		t.Skip("test has been skipped. The endpoint does not support PrivateKey")
+	}
+
 	// Create a user with credentials, activated by default → POST /api/v1/users?activate=true
 	p := &okta.PasswordCredential{
 		Value: "Abcd1234",
