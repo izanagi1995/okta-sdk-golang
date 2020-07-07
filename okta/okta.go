@@ -68,7 +68,6 @@ func NewClient(ctx context.Context, conf ...ConfigSetter) (context.Context, *Cli
 	config := &config{}
 
 	setConfigDefaults(config)
-	config = readConfigFromSystem(*config)
 	config = readConfigFromApplication(*config)
 	config = readConfigFromEnvironment(*config)
 
