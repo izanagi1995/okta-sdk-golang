@@ -1,4 +1,4 @@
-module github.com/okta/okta-sdk-golang/v2
+module github.com/izanagi1995/okta-sdk-golang/v2
 
 require (
 	github.com/go-yaml/yaml v2.1.0+incompatible
